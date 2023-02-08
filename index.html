@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Hahmlet&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+  </style>
+  
+  <script src="https://kit.fontawesome.com/eae775b921.js" crossorigin="anonymous"></script>                                                               
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script>
+
+    window.addEventListener('scroll', function(){
+
+        if(window.scrollY >= 350) {
+
+          document.querySelector('.for_1280px_header ').classList.add('scroll_header_css')
+        }
+        else {
+          document.querySelector('.for_1280px_header ').classList.remove('scroll_header_css')
+        }
+
+
+
+      if(window.scrollY >= 950) {
+
+        let li_first = document.querySelectorAll('.skills_box li')
+
+        let li_child1 = li_first[0].querySelector('.for_opacity')
+        let li_child2 = li_first[1].querySelector('.for_opacity')
+        let li_child3 = li_first[2].querySelector('.for_opacity')
+
+        li_first[0].classList.add('skills_animation_up')
+        
+        setTimeout(()=> {
+          li_first[1].classList.add('skills_animation_up')
+        }, 600)
+
+        setTimeout(()=> {
+        li_first[2].classList.add('skills_animation_up')
+        }, 1200)
+
+        setTimeout(()=> {
+          li_first[0].querySelector('.img').classList.add('img_opacity')
+          li_child1.classList.add('opacity')
+        }, 1700)
+        
+        setTimeout(()=> {
+          li_first[1].querySelector('.img').classList.add('img_opacity')
+          li_child2.classList.add('opacity')
+        }, 2200)
+        setTimeout(()=> {
+          li_first[2].querySelector('.img').classList.add('img_opacity')
+          li_child3.classList.add('opacity')
+        }, 2700)
+
+      }
+
+      if(window.scrollY >= 1520) {
+
+        let li_first = document.querySelectorAll('.skills_box li')
+
+        let li_child4 = li_first[3].querySelector('.for_opacity')
+        let li_child5 = li_first[4].querySelector('.for_opacity')
+        let li_child6 = li_first[5].querySelector('.for_opacity')
+
+        li_first[3].classList.add('skills_animation_up')
+
+        setTimeout(()=> {
+          li_first[4].classList.add('skills_animation_up')
+        }, 600)
+
+        setTimeout(()=> {
+        li_first[5].classList.add('skills_animation_up')
+        }, 1200)
+
+        setTimeout(()=> {
+          li_first[3].querySelector('.img').classList.add('img_opacity')
+          li_child4.classList.add('opacity')
+        }, 1700)
+        
+        setTimeout(()=> {
+          li_first[4].querySelector('.img').classList.add('img_opacity')
+          li_child5.classList.add('opacity')
+        }, 2200)
+        setTimeout(()=> {
+          li_first[5].querySelector('.img').classList.add('img_opacity')
+          li_child6.classList.add('opacity')
+        }, 2700)
+      }
+
+      document.querySelector('.shopping_web').addEventListener('click',() => {
+        window.location = 'http://dlgytjr123.dothome.co.kr/'
+      })
+      document.querySelector('.shopping_code').addEventListener('click',() => {
+        window.location = 'https://github.com/LHS1702/shopping_mall_site.git'
+      })
+
+
+      
+      document.querySelector('.busan_web').addEventListener('click',() => {
+        window.location = 'http://dlgytjr456.dothome.co.kr/'
+      })
+      document.querySelector('.busan_code').addEventListener('click',() => {
+        window.location = 'https://github.com/LHS1702/busan_site.git'
+      })
+
+
+
+      document.querySelector('.paris_web').addEventListener('click',() => {
+        window.location = 'https://lhs1702.github.io/react_react'
+      })
+      document.querySelector('.paris_code').addEventListener('click',() => {
+        window.location = 'https://github.com/LHS1702/react_react'
+      })
+
+
+
+       document.querySelector('.my_github').addEventListener('click',() => {
+        window.location = 'https://github.com/LHS1702'
+      })
+    }
+    )
+    
+    $(function(){
+      
+      $('.portfolio').click(function(){
+        $('html').animate({scrollTop : 0},800)
+      })
+
+      $('.about_scroll').click(function(){
+       let height = $('.about').offset().top - 80
+       $('html').animate({scrollTop : height}, 800)
+      });
+
+      $('.skills_scroll').click(function(){
+       let height = $('.skills').offset().top - 79
+       $('html').animate({scrollTop : height}, 800)
+      });
+      
+      $('.projects_scroll').click(function(){
+       let height = $('.projects').offset().top - 80
+       $('html').animate({scrollTop : height}, 800)
+      });
+      $('.contact_scroll').click(function(){
+       let height = $('.contact').offset().top - 80
+       $('html').animate({scrollTop : height}, 800)
+      });
+
+    });
+
+  
+    
+
+  
+    
+    
+    
+
+
+      
+    
+
+  </script>
+  <style>
+
+    * {margin: 0; padding: 0;}
+    li {
+      list-style: none;
+    }
+    body {
+      scroll-behavior: smooth;
+    }
+
+
+  .for_1280px_header {
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    transition-property: background-color;
+    transition-property: color;
+    transition-duration: 2s;
+    z-index: 1;
+  }
+  .scroll_header_css {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    color: dodgerblue;
+    font-weight: bold;
+  }
+   header {
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+   }
+   header div:first-child {
+    float: left;
+    margin-left: 30px;
+   }
+   header div:first-child p {
+    line-height: 80px;
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+   }
+   header div:last-child {
+    float: right;
+    margin-right: 30px;
+   }
+   header div:last-child p {
+    width: 120px;
+    float: left;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 20px;
+   }
+   header div:last-child p:hover {
+    color: orange;
+   }
+
+   .main {
+    background-color:#00539C;
+   }
+   .main>div {
+    max-width: 1280px;
+    height: 600px;
+    margin: 0 auto;
+    padding-top: 50px;
+    box-sizing: border-box;
+   }
+   .main>div>p:nth-child(1) {
+      width: 300px;
+      height: 300px;
+      border-radius: 50px;
+      overflow: hidden;
+      margin: 0 auto;
+   }
+   .main>div>p:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+   }
+   .main>div>p:nth-child(2) {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+    font-family: 'Single Day', cursive;
+    color: white;
+   }
+   .main>div>p:nth-child(3), .main>div>p:nth-child(4) {
+    text-align: center;
+    font-size: 24px;
+    height: 35px;
+    line-height: 35px;
+    /* color: #FFDFDE; */
+    color: #FFD662;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bold;
+   }
+
+
+
+   .about {
+    background-color:#2C5F2D;
+    padding-top: 80px;
+   }
+   .about > div {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 650px;
+   }
+   .about > div p:nth-child(1) {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Libre Baskerville', serif; 
+    color: #FFE77A;
+   }
+   .about > div ul {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+   .about > div ul li {
+    width: 30%;
+    margin-bottom: 50px;
+    height: 100px;
+    /* background-color: #ccc; */
+    padding: 0px 30px;
+    box-sizing: border-box;
+   }
+   .about > div ul li:last-child {
+    height: 170px;
+   }
+   .about > div ul li i {
+    float: left;
+    height: 100%;
+    width: 20px;
+    font-size: 40px;
+    margin-right: 40px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    color: #FFE77A;
+   }
+   .about > div ul li p {
+    font-size: 20px;
+    color:#FFE77A;
+   }
+   .about > div ul li p:nth-child(2) {
+     font-family: 'Noto Serif KR', serif;
+    margin-bottom: 5px;
+    color: #FFE77A;
+    font-size: 21px;
+    font-weight: bold;
+   }
+  
+
+   .skills {
+    background-color: #CCF381;
+   }
+   .skills > div {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 800px;
+   }
+   .skills > div > p {
+    font-size: 50px;
+    text-align: center;
+    color: #4831D4;
+    font-family: 'Merriweather', serif;
+    padding-top: 60px;
+    padding-bottom: 60px;
+   }
+   .skills > div ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding-bottom: 20px;
+   }
+   .skills > div ul li {
+    width: 33.3%;
+    height: 200px;
+    margin-bottom: 40px;
+    text-align: center;
+    visibility: hidden;
+    position: relative;
+    overflow: hidden;
+   }
+   .skills > div ul li p:nth-child(2) {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+    background-color: cornflowerblue;
+    height: 0px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Mochiy Pop One', sans-serif;
+    /* color: #4831D4; */
+    color: crimson;
+   }
+   .skills > div ul li p:nth-child(2).opacity {
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+   }
+   .skills > div ul li.skills_animation_up {
+    animation-name: slide;
+    animation-duration: 1s;
+    visibility: visible;
+    animation-timing-function: ease-in-out;
+   }
+     .skills > div ul li img {
+    width: 50%;
+    height: 80%;
+    margin: 0 auto;
+   }
+   .skills > div ul li img.img_opacity {
+    animation-name: img_opacity;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+   }
+
+  
+   @keyframes slide  {
+    0% {
+      opacity: 0; 
+      transform: translateY(-40%);
+    }
+    100% {
+      opacity: 1; 
+      transform: translateY(0%);
+    }
+   }
+   @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      top: 160px;
+    }
+   }
+   @keyframes img_opacity {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+   }
+
+   .projects {
+    height: 2480px;
+    background-color: #1E4174;
+   }
+   .projects > div {
+    max-width: 1280px;
+    margin: 0 auto;
+   }
+   .projects > div > p {
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    font-size: 50px;
+    font-family: 'Merriweather', serif;
+    color: #DDA94B;
+   }
+   .projects > div > ul > li {
+    /* height: 1000px; */
+    background-color: snow;
+    border-radius: 40px;
+    margin-bottom: 60px;
+   }
+   .projects > div > ul > li >p:nth-child(1) {
+    text-align: center;
+    height: 70px;
+    line-height: 90px;
+    font-size: 26px;
+    font-family: 'Hahmlet', serif;
+   }
+   .projects > div > ul > li >p:nth-child(2) {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+   }
+   .projects > div > ul > li > ul {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+   }
+   .projects > div > ul > li > ul > li:nth-child(1) {
+    width: 48%;
+    height: 500px;
+    float: left;
+    /* background-color: yellow; */
+  }
+   .projects > div > ul > li > ul > li:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+   }
+   .projects > div > ul > li > ul > li:nth-child(2) {
+    width: 48%;
+    float: right;
+   }
+   .projects > div > ul > li > ul > li:nth-child(2) p:nth-child(1) {
+    font-size: 23px;
+    font-weight: bold;
+   }
+   .projects > div > ul > li > ul > li:nth-child(2) p:nth-child(2) {
+    margin-top: 40px;
+    line-height: 34px;
+    font-size: 19px;
+    margin-bottom: 20px;
+   }
+   .projects > div > ul > li > ul > li:nth-child(2) p:nth-child(3) {
+    font-size: 20px;
+    line-height: 40px;
+   }
+   .projects > div > ul > li > ul > li:nth-child(2) ul {
+    height: 50px;
+    margin-top: 40px;
+   }
+   .projects > div > ul > li > ul > li:nth-child(2) ul li {
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5px;
+    width: 48%;
+    font-size: 20px;
+  }
+   .projects > div > ul > li > ul > li:nth-child(2) ul li:first-child {
+    float: left;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+   }
+   .projects > div > ul > li > ul > li:nth-child(2) ul li:last-child {
+    float: right;
+    background-color: #ccc;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
+   .contact {
+    height: 280px;
+    width: 100%;
+    background-color:#F2EDD7;
+   }
+   .contact > div {
+    max-width: 1280px;
+    margin: 0 auto;
+   }
+   .contact > div > p {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: #755139;
+   }
+   .contact > div > p:nth-child(1) {
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+   }
+
+   .my_github:hover {
+    text-decoration: underline;
+    cursor: pointer;
+   }
+  
+  </style>
+
+</head>
+<body>
+
+<section class="for_1280px_header">
+  <header>
+    <div><p class="portfolio">PORTFOLIO</p></div>
+    <div>
+      <p class="about_scroll">ABOUT</p>
+      <p class="skills_scroll">SKILLS</p>
+      <p class="projects_scroll">PROJECTS</p>
+      <p class="contact_scroll">CONTACT</p>
+    </div>
+  </header>
+</section>
+
+<section class="main">
+  <div>
+    <p><img src="./images/main_image.jpeg"></p>
+    <p>프론트엔드 개발자 포트폴리오</p>
+    <p>안녕하세요. 웹 프론트엔드 개발자가 되고 싶은 이효석입니다.</p>
+    <p>저의 포트폴리오 사이트 방문을 환영합니다.</p>
+  </div>
+</section>
+
+<section class="about">
+<div>
+  
+  <p>ABOUT ME</p>
+  <ul>
+    <li>
+      <i class="fa-solid fa-user"></i>
+      <p>이름</p>
+      <p>이효석</p>
+    </li>
+    <li>
+      <i class="fa-solid fa-phone"></i>
+      <p>연락처</p>
+      <p>010-4731-2239</p>
+    </li>
+    <li>
+      <i class="fa-solid fa-location-dot"></i>
+      <p>주소지</p>
+      <p>경남 창원시 성산구</p>
+    </li>
+    <li>
+      <i class="fa-solid fa-calendar-days"></i>
+      <p>생년월일</p>
+      <p>1998.08.24</p>
+    </li>
+    <li>
+      <i class="fa-solid fa-envelope"></i>
+      <p>이메일</p>
+      <p>dlgytjr1702@naver.com</p>
+    </li>
+    <li>
+      <i class="fa-solid fa-person-military-rifle"></i>
+      <p>군대 (육군 만기전역)</p>
+      <p>2018.06.18 ~ 2020.02.08</p>
+    </li>
+    <li>
+      <i class="fa-solid fa-graduation-cap"></i>
+      <p>학력</p>
+      <p style="margin-bottom: 20px;">
+        동의과학대학교 2년제 졸업</br>(17.03~22.02)
+      </p>
+      <p>대암고등학교 자연계 졸업(14.03~17.02)</p>
+    </li>
+  </ul>
+
+</div>
+</section>
+
+<section class="skills">
+  <div>
+
+    <p>SKILLS</p>
+
+    <ul class="skills_box">
+      <li>
+        <img src="./images/html.png" class="img">
+        <p class="for_opacity">80%</p>
+      </li>
+      <li><img src="./images/css.png" class="img"><p class="for_opacity">80%</p></li>
+      <li><img src="./images/js.png" class="img"><p class="for_opacity">70%</p></li>
+      <li><img src="./images/jquery.png" class="img"><p class="for_opacity">80%</p></li>
+      <li><img src="./images/react.png" class="img"><p class="for_opacity">50%</p></li>
+      <li><img src="./images/sass.png" class="img"><p class="for_opacity">80%</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="projects">
+  <div>
+    <p>PROJECTS</p>
+  
+    <ul>
+
+      <li style="height: 700px;">
+        <p>쇼핑몰 사이트</p>
+        <p>(개인 프로젝트)</p>
+        <ul>
+          <li>
+            <img src="./images/desktop.png">
+          </li>
+          <li>
+            <p>허그본 쇼핑몰 사이트를 리뉴얼한 사이트입니다.
+            </p>
+            <p>
+             - 로그인페이지에서 아이디와 비밀번호 값이 맞게 들어왔는지 확인할 수 있게 하였습니다.</br>- 데이터 파일에 들어있는 상품들을 원하는 방식으로 나열하여 볼 수 있도록 하였습니다.<br/>- 이미지를 첨부하여 댓글 추가, 삭제 기능을 만들었습니다.</br>- Swiper 라이브러리를 사용하여 슬라이드를 구현하였습니다.
+            </p>
+            <p><span style="font-size: 26px; font-weight: bold;">사용 기술</span></br>HTML / CSS / JavaScript / jQuery
+            </p>
+            <ul>
+              <li class="shopping_code"><i class="fa-brands fa-github" style="margin-right: 5px;"></i>GitHub</li>
+              <li class="shopping_web">Web</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li style="height: 700px;">
+        <p>부산광역시 사이트</p>
+        <p>(팀 프로젝트)</p>
+        <ul>
+          <li>
+            <img src="./images/responsive.png">
+          </li>
+          <li>
+            <p>부산광역시 사이트를 리뉴얼한 사이트입니다.
+            </p>
+            <p>
+             - PC, Tablet, Mobile  반응형으로 제작하였습니다.</br>- 클릭이벤트를 이용하여 index값으로 이미지 파일을 불러왔습니다.<br/>- Swiper의 반응형 효과를 이용하여 슬라이드를 나타내었습니다.</br>- 댓글 추가, 삭제 기능을 만들었습니다.</br>- 팀 프로젝트에서 메인, 서브페이지의 모바일 버전 디자인을 맡았습니다.
+            </p>
+            <p><span style="font-size: 26px; font-weight: bold;">사용 기술</span></br>HTML / CSS /  JavaScript / jQuery
+            </p>
+            <ul>
+              <li class="busan_code"><i class="fa-brands fa-github" style="margin-right: 5px;"></i>GitHub</li>
+              <li class="busan_web">Web</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li style="height: 700px;">
+        <p>파리바게뜨 사이트</p>
+        <p>(개인 프로젝트)</p>
+        <ul>
+          <li>
+            <img src="./images/project3.JPG">
+          </li>
+          <li>
+            <p>파리바게뜨 홈페이지의 일부분을 리액트로 만들어 보았습니다.
+            </p>
+            <p>
+             - 장바구니에 상품을 추가하는 기능을 구현하였습니다.</br>- 상품 개수 설정과 최종 결제금액을 확인할 수 있게 하였습니다.<br/>- 메인 화면에서 장바구니에 담긴 상품 개수를 알 수 있게 숫자로 표시하였습니다</br>- 댓글 추가, 삭제 기능을 만들었습니다.
+            </p>
+            <p><span style="font-size: 26px; font-weight: bold;">사용 기술</span></br>HTML / Sass / JavaScript / React / react-router / react-redux
+            </p>
+            <ul>
+              <li class="paris_code"><i class="fa-brands fa-github" style="margin-right: 5px;"></i>GitHub</li>
+              <li class="paris_web">Web</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+<section class="contact">
+  <div>
+    <p>CONTACT</p>
+    <p><i class="fa-solid fa-envelope"></i> dlgytjr1702@naver.com</p>
+    <p><i class="fa-solid fa-phone"></i> 010-4731-2239</p>
+    <p class="my_github"><i class="fa-brands fa-github"></i> LHS1702 GitHub</p>
+  </div>
+</section>
+
+</body>
+</html>
